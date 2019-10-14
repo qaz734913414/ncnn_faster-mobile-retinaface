@@ -16,6 +16,7 @@ RetinaFace::RetinaFace(const std::string &model_path) {
 		model_path+"/retina.bin",
 	};
 	*/
+	/*
 	std::vector<std::string> param_files = {
 		model_path + "/16and32.param",
 	};
@@ -23,7 +24,16 @@ RetinaFace::RetinaFace(const std::string &model_path) {
 	std::vector<std::string> bin_files = {
 		model_path + "/16and32.bin",
 	};
+	*/
+	
+	std::vector<std::string> param_files = {
+		model_path + "/16and32-opt.param",
+	};
 
+	std::vector<std::string> bin_files = {
+		model_path + "/16and32-opt.bin",
+	};
+	
 	_net.load_param(param_files[0].data());
 	_net.load_model(bin_files[0].data());
 	ac.resize(_feat_stride_fpn.size());

@@ -17,7 +17,7 @@ extern float pixel_std[3];
 class RetinaFace {
 
 public:
-	float scale = 0.5;
+	float scale = 0.25;
 	RetinaFace(const std::string &model_path);
 	RetinaFace(const std::vector<std::string> param_files, const std::vector<std::string> bin_files);
 	~RetinaFace();
